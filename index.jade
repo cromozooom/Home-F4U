@@ -1,0 +1,99 @@
+mixin bannerGrid(grid, link, img, p, h, specialCopy, brand)
+	div(class="span#{grid}")
+			a.bannerGrid(href="#{link}")
+				if specialCopy
+					img.special(src="assets/images/#{img}" alt="#{p}")
+					.specialOffer
+						if brand
+							.brand
+								svg(viewBox="0 0 600 600" width="100" height="100")
+									use(xlink:href="#{brand}" x="0" y="0")
+						if specialCopy
+							p !{specialCopy}
+				else
+					img(src="assets/images/#{img}" alt="#{p}")
+					.specialOffer
+						if brand
+							.brand
+								svg(viewBox="0 0 600 600" width="100" height="100")
+									use(xlink:href="#{brand}" x="0" y="0")
+						if specialCopy
+							p !{specialCopy}
+
+				.copy
+					p= p
+					h5= h
+mixin iconServices(grid, idSvg)
+	li
+		div(class="#{grid}")
+			.row-fluid
+				.icon.span3
+					.iconServices
+						svg(viewBox="0 0 600 600" width="100" height="100")
+							use(xlink:href="#{idSvg}" x="0" y="0")
+				.desc.span9
+					block
+doctype html
+html(lang="it")
+	head
+		//include include/head.html
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(href="assets/css/bootstrap.css" rel="stylesheet" media="screen")
+		link(href="assets/css/responsive.css" rel="stylesheet" media="screen")
+		link(href="assets/css/services.css" rel="stylesheet" media="screen")
+		link(href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700,200' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css')
+	body.cms-index-index.cms-home
+		// include include/analitycs.html
+		br
+		br
+		svg(style="display: none;")
+			g.iconServices
+				include include/svg/iconServices.svg
+			g.iconBrand
+				include include/svg/brand.svg
+		.container
+			.row
+				ul.servicesSvg
+					+iconServices("span3", "#freeShipping")
+						h4 Spedizione Gratuita
+						small in Italia per ordini superiori a 90&euro;
+					+iconServices("span3", "#personalize")
+						h4 Prodotti Personalizzabili
+						small in 24 ore
+					+iconServices("span3", "#freereturn")
+						h4 Reso Gratuito
+					+iconServices("span3", "#fastShipping")
+						h4 Spedizione Veloce
+						small 24/48 ore
+			//- 1. nr of column (from 1 to 12)
+			//- 2. link for the banner
+			//- 3. image name
+			//- 4. message
+			//- 5. CTA
+			//- 6. special offer - use &euro; for €
+			//- 7 brand available: reusch, macron, asics, uhl, joma, mizuno, puma, adidas, nike,
+
+
+			.row-fluid
+				+bannerGrid(12, "http://solopx.com", "serie-a-15-16_huge.png", "Serie A 2015-16 10%", "acquista subito", false, "#reusch")
+
+			.row-fluid
+				+bannerGrid(3, "http://solopx.com", "accessori-outlet.png", "Accessori outlet da 5&euro;", "acquista subito", false, "#macron")
+				+bannerGrid(3, "http://solopx.com", "adidas-15-16-collection.png", "Adidas 2015/16 -10%", "vedi l'oferta", false, "#asics")
+				+bannerGrid(3, "http://solopx.com", "guanti-portiere-40.png", "Maglie gara 02", "acquista subito", "Until 40%", "#uhl")
+				+bannerGrid(3, "http://solopx.com", "italia-40.png", "Italy collection", "acquista subito", "40%", "#joma")
+
+			.row-fluid
+				+bannerGrid(6, "http://solopx.com", "serie-a-15-16_large.png", "Serie A 2015-16 10%", "acquista subito", "70%", "#mizuno")
+				+bannerGrid(3, "http://solopx.com", "scarpe-calcio-outlet.png", "Football boots clearance", "vedi l'oferta", "Until 50%", "#adidas")
+				+bannerGrid(3, "http://solopx.com", "teamsport-nike-50.png", "Team sport", "acquista subito", "10%", "#nike")
+
+			.row-fluid
+				+bannerGrid(4, "http://solopx.com", "scarpe-bambino.png", "scarpe bambino 10%", "acquista subito", flase, "#puma")
+				+bannerGrid(4, "http://solopx.com", "accessori-outlet.png", "Kids football boots", "acquista subito", "Until 50%", "#adidas")
+				+bannerGrid(4, "http://solopx.com", "teamsport-nike-50.png", "Team sport", "acquista subito", "10%", "#adidas")
+
+		//script(src="assets/js/jquery.js")
+		//script(src="js/bootstrap.min.js")
+		//include include/endBodyScript.html

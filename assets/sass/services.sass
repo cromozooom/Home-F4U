@@ -1,0 +1,119 @@
+$primary: #b5ff00
+$promo: red
+$font: 'Yanone Kaffeesatz', sans-serif
+$font: 'Pathway Gothic One', sans-serif;
+$svgSize: 40px
+$brandSvgSize: 60px
+
+.servicesSvg svg
+.brand svg
+
+.iconServices
+	svg
+		width: $svgSize
+		height: $svgSize
+		margin: 0
+.iconServices
+	.fillIcons
+		fill: $primary
+.brand
+	svg
+		float: left
+		margin-left: 10px
+		width: $brandSvgSize
+		height: $brandSvgSize
+		opacity: .9
+.iconBrand
+	.fillIcons
+		fill: white
+
+.servicesSvg
+	list-style: none
+	padding: 0px
+	margin: 0
+	.desc
+		//float: left
+		//display: block
+		//background: darken( $primary, 70%)
+		//padding-left: 20px
+	.icon
+		//display: block
+		//float: left
+	h4
+		font-size: 1em
+		font-size: 1.2em
+		line-height: 1em
+		margin: 0
+		padding: 0px 0 0 0
+		padding: 5px 0 0 0
+		color: darken(white, 40%)
+		display: block
+		font-family: $font
+		font-weight: 300
+	small
+		color: darken(white, 2%)
+		font-size: .8em
+		font-size: .9em
+		font-family: $font
+		font-weight: 100
+
+
+
+
+.bannerGrid
+
+	position: relative
+	width: 100% /* for IE 6 */
+	display: block
+	overflow: hidden
+	margin-top: 2em
+	img
+		border-top: 2px solid $primary
+	img.special
+		border-top: 2px solid $promo
+
+	.brand
+		color: red
+
+	.specialOffer
+		position: absolute
+		top: 0
+  		left: 0
+		width: 100%
+		color: white
+		p
+			background: $promo
+			font-family: $font
+			font-size: 2em
+			line-height: 1.8em
+			padding: 0 .5em
+			margin: 0
+			float: right
+	.copy
+		position: absolute
+		bottom: 0
+  		left: 0
+		width: 100%
+		background: black /* fallback color */
+		background-color: rgba(black, .75)
+		p, h5
+			color: white
+			//font: bold 24px/45px Helvetica, Sans-Serif
+			//letter-spacing: -1px
+			padding-top: .7em
+			padding-left: 10px
+			padding-right: 10px
+			line-height: 1em
+			margin: 0
+
+		p
+			color: darken(white, 20%)
+			line-height: 1em
+		h5
+			color: $primary
+			text-transform: uppercase
+			font-family: $font
+			font-size: 1.5em
+			font-weight: normal
+			padding-bottom: .5em
+			text-decoration: underline
