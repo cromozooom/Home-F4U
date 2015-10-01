@@ -2,9 +2,9 @@
 include include/mixin
 
 //- path to files
-- imgPath 		= "assets/images/"											//- locals
 - imgPath 		= "https://f4u.olimpia.me//media/epi/banner/small/test/"	//- olimpia
 - imgPath 		= "https://football4u.it/media/epi/banner/small/test/"		//- production
+- imgPath 		= "assets/images/"											//- locals
 
 block lang
 	//- lang setup (available value: en, it)
@@ -62,10 +62,14 @@ if lang == "it"
 		+bannerGrid(12, "#", "serie-a-15-16_huge.jpg", "Serie A 2015-16 10%", "acquista subito", false, "#reusch")
 
 	.row-fluid
-		+bannerGrid(3, "#", "accessori-outlet.jpg", "Accessori outlet da 5&euro;", "acquista subito", false, "#macron")
-		+bannerGrid(3, "#", "adidas-15-16-collection.jpg", "Adidas 2015/16 -10%", "vedi l'oferta", false, "#asics")
-		+bannerGrid(3, "#", "guanti-portiere-40.jpg", "Maglie gara 02", "acquista subito", "Until 40%", "#uhl")
-		+bannerGrid(3, "#", "italia-40.jpg", "Italy collection", "acquista subito", "40%", "#joma")
+		//+bannerGrid(4, "#", "scarpe-bambino.jpg", "scarpe bambino 10%", "acquista subito", flase, "#puma")
+		+bannerGrid(6, "#", "accessori-outlet.jpg", "Kids football boots", "acquista subito", false, "#adidas")
+		+bannerGrid(6, "#", "teamsport-nike-50.jpg", "Team sport", "acquista subito", "10%", "#adidas")
+
+	.row-fluid
+		+bannerGrid(4, "#", "scarpe-bambino.jpg", "scarpe bambino 10%", "acquista subito", flase, "#puma")
+		+bannerGrid(4, "#", "accessori-outlet.jpg", "Kids football boots", "acquista subito", "Until 50%", "#adidas")
+		+bannerGrid(4, "#", "teamsport-nike-50.jpg", "Team sport", "acquista subito", "10%", "#adidas")
 
 	.row-fluid
 		+bannerGrid(6, "#", "serie-a-15-16_large.jpg", "Serie A 2015-16 10%", "acquista subito", "70%", "#mizuno")
@@ -73,9 +77,10 @@ if lang == "it"
 		+bannerGrid(3, "#", "teamsport-nike-50.jpg", "Team sport", "acquista subito", "10%", "#nike")
 
 	.row-fluid
-		+bannerGrid(4, "#", "scarpe-bambino.jpg", "scarpe bambino 10%", "acquista subito", flase, "#puma")
-		+bannerGrid(4, "#", "accessori-outlet.jpg", "Kids football boots", "acquista subito", "Until 50%", "#adidas")
-		+bannerGrid(4, "#", "teamsport-nike-50.jpg", "Team sport", "acquista subito", "10%", "#adidas")
+		+bannerGrid(3, "#", "accessori-outlet.jpg", "Accessori outlet da 5&euro;", "acquista subito", false, "#macron")
+		+bannerGrid(3, "#", "adidas-15-16-collection.jpg", "Adidas 2015/16 -10%", "vedi l'oferta", false, "#asics")
+		+bannerGrid(3, "#", "guanti-portiere-40.jpg", "Maglie gara 02", "acquista subito", "Until 40%", "#uhl")
+		+bannerGrid(3, "#", "italia-40.jpg", "Italy collection", "acquista subito", "40%", "#joma")
 
 if lang == "en"
 	.row-fluid
