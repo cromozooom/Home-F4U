@@ -2,10 +2,9 @@
 include include/mixin
 
 //- path to files
-
 - imgPath 		= "assets/images/"											//- locals
-- imgPath 		= "https://football4u.it/media/epi/banner/small/test/"		//- production
 - imgPath 		= "https://f4u.olimpia.me//media/epi/banner/small/test/"	//- olimpia
+- imgPath 		= "https://football4u.it/media/epi/banner/small/test/"		//- production
 
 block lang
 	//- lang setup (available value: en, it)
@@ -39,7 +38,7 @@ if lang == "it"
 
 //- START YOUR BANNER GRID
 
-//- ad this ".row-fluid" for any row block with banners
+//- add this ".row-fluid" for any row block with banners
 //- indent and then add: "+bannerGrid" and open "()" for any banner inside the row
 //- inside "()" you need to put this parameters:
 
@@ -52,12 +51,14 @@ if lang == "it"
 
 	//- you qnow that bootstrap has available 12 columns
 
-//- 2. link for the banner
-//- 3. image name
-//- 4. message
-//- 5. CTA
-//- 6. special offer - use &euro; for €
-//- 7 brand available: reusch, macron, asics, uhl, joma, mizuno, puma, adidas, nike,
+//- 2. link for the banner, between ""
+//- 3. image name, between ""
+//- 4. message, between ""
+//- 5. CTA, between ""
+//- 6. special offer - use &euro; for €, between ""
+	//- if you don't need the special offer can you put false without "".
+//- 7 brand available: reusch, macron, asics, uhl, joma, mizuno, puma, adidas, nike
+	//- if you don't need the brand can you put false without "".
 
 if lang == "en"
 	.row-fluid
