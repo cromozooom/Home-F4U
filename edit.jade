@@ -8,7 +8,7 @@ include include/mixin
 
 block lang
 	//- lang setup (available value: en, it)
-	- lang 			= "en"
+	- lang 			= "it"
 
 //- svg we need
 svg(style="display: none;")
@@ -38,29 +38,26 @@ if lang == "it"
 
 //- START YOUR BANNER GRID
 
-//- add this ".row-fluid" for any row block with banners
-//- indent and then add: "+bannerGrid" and open "()" for any banner inside the row
-//- inside "()" you need to put this parameters:
+//-		 add this ".row-fluid" for any row block with banners
+//-		 indent and then add: "+bannerGrid" and open "()" for any banner inside the row
+//-		 inside "()" you need to put this parameters:
+//-
+//-		 1. width of the banner (you qnow that bootstrap has available 12 columns) ex:
+//-		   a. 4 equal banner / row - you need to put "3"
+//-		   b. 3 equal banner / row - you need to put "4"
+//-		   c. 2 equal banner / row - you need to put "6"
+//-		   d. 1 banner / row - you need to put "12"
+//-		 2. link for the banner, between ""
+//-		 3. image name, between ""
+//-		   a. small baner has 600/780 px ()
+//-		   b. large banner has 1230/760
+//-		   c. huge banner has 1230/ your chuse
+//-		 4. message, between ""
+//-		 5. CTA, between ""
+//-		 6. special offer - use &euro; for €, between "" - if you don't need the special offer can you put false without "".
+//-		 7 brand available: reusch, macron, asics, uhl, joma, mizuno, puma, adidas, nike - if you don't need the brand can you put false without "".
 
-
-//- 1. width of the banner - ex:
-	//- 4 equal banner / row - you need to put "3"
-	//- 3 equal banner / row - you need to put "4"
-	//- 2 equal banner / row - you need to put "6"
-	//- 1 banner / row - you need to put "12"
-
-	//- you qnow that bootstrap has available 12 columns
-
-//- 2. link for the banner, between ""
-//- 3. image name, between ""
-//- 4. message, between ""
-//- 5. CTA, between ""
-//- 6. special offer - use &euro; for €, between ""
-	//- if you don't need the special offer can you put false without "".
-//- 7 brand available: reusch, macron, asics, uhl, joma, mizuno, puma, adidas, nike
-	//- if you don't need the brand can you put false without "".
-
-if lang == "en"
+if lang == "it"
 	.row-fluid
 		+bannerGrid(12, "#", "serie-a-15-16_huge.jpg", "Serie A 2015-16 10%", "acquista subito", false, "#reusch")
 
@@ -80,7 +77,7 @@ if lang == "en"
 		+bannerGrid(4, "#", "accessori-outlet.jpg", "Kids football boots", "acquista subito", "Until 50%", "#adidas")
 		+bannerGrid(4, "#", "teamsport-nike-50.jpg", "Team sport", "acquista subito", "10%", "#adidas")
 
-if lang == "it"
+if lang == "en"
 	.row-fluid
 		+bannerGrid(12, "#", "serie-a-15-16_huge.jpg", "Serie A 2015-16 10%", "acquista subito", false, "#reusch")
 
