@@ -1,0 +1,35 @@
+mixin bannerGrid(grid, link, img, p, h, specialCopy, brand)
+	div(class="span#{grid}")
+			a.bannerGrid(href="#{link}")
+				if specialCopy
+					img.special(src="#{imgPath}#{img}" alt="#{p}")
+					.specialOffer
+						if brand
+							.brand
+								svg(viewBox="0 0 600 600" width="100" height="100")
+									use(xlink:href="#{brand}" x="0" y="0")
+						if specialCopy
+							p !{specialCopy}
+				else
+					img(src="#{imgPath}#{img}" alt="#{p}")
+					.specialOffer
+						if brand
+							.brand
+								svg(viewBox="0 0 600 600" width="100" height="100")
+									use(xlink:href="#{brand}" x="0" y="0")
+						if specialCopy
+							p !{specialCopy}
+
+				.copy
+					p= p
+					h5= h
+mixin iconServices(grid, idSvg)
+	li
+		div(class="#{grid}")
+			.row-fluid
+				.icon.span3
+					.iconServices
+						svg(viewBox="0 0 600 600" width="100" height="100")
+							use(xlink:href="#{idSvg}" x="0" y="0")
+				.desc.span9
+					block
