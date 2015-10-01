@@ -2,9 +2,9 @@
 include include/mixin
 
 //- path to files
-- imgPath 		= "https://f4u.olimpia.me//media/epi/banner/small/test/"	//- olimpia
 - imgPath 		= "https://football4u.it/media/epi/banner/small/test/"		//- production
 - imgPath 		= "assets/images/"											//- locals
+- imgPath 		= "https://f4u.olimpia.me//media/epi/banner/small/test/"	//- olimpia
 
 block lang
 	//- lang setup (available value: en, it)
@@ -21,7 +21,7 @@ svg(style="display: none;")
 		g.iconBrand
 			include include/svg/brand.svg
 if lang == "it"
-	.row-fluid
+	.row-fluid.visible-desktop
 		br
 		ul.servicesSvg
 			+iconServices("span3 offset1", "#freeShipping")
