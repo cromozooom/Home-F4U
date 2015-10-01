@@ -3,8 +3,8 @@ include include/mixin
 
 //- path to files
 - imgPath 		= "https://football4u.it/media/epi/banner/small/test/"		//- production
-- imgPath 		= "assets/images/"											//- locals
 - imgPath 		= "https://f4u.olimpia.me//media/epi/banner/small/test/"	//- olimpia
+- imgPath 		= "assets/images/"											//- locals
 
 block lang
 	//- lang setup (available value: en, it)
@@ -21,9 +21,9 @@ svg(style="display: none;")
 		g.iconBrand
 			include include/svg/brand.svg
 if lang == "it"
-	.row-fluid.visible-desktop
+	.row-fluid
 		br
-		ul.servicesSvg
+		ul.servicesSvg.visible-desktop
 			+iconServices("span3 offset1", "#freeShipping")
 				h4 Spedizione Gratuita
 				small in Italia per ordini superiori a 90&euro;
