@@ -10,12 +10,15 @@ indent and then add: "+bannerGrid" and open "()" for any banner inside the row
 inside "()" you need to put this parameters:
 
 1. width of the banner (you qnow that bootstrap has available 12 columns) ex:
-  1. 4 equal banner / row - you need to put "3"
-  2. 3 equal banner / row - you need to put "4"
-  3. 2 equal banner / row - you need to put "6"
-  4. 1 banner / row - you need to put "12"
+  a. 4 equal banner / row - you need to put "3"
+  b. 3 equal banner / row - you need to put "4"
+  c. 2 equal banner / row - you need to put "6"
+  d. 1 banner / row - you need to put "12"
 2. link for the banner, between ""
 3. image name, between ""
+  a. small baner has 600/780 px ()
+  b. large banner has 1230/760
+  c. huge banner has 1230/ your chuse
 4. message, between ""
 5. CTA, between ""
 6. special offer - use &euro; for €, between "" - if you don't need the special offer can you put false without "".

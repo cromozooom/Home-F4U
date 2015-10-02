@@ -1,5 +1,6 @@
 mixin bannerGrid(grid, link, img, p, h, specialCopy, brand)
 	div(class="span#{grid}")
+			//a.bannerGrid(href="#{link}")
 			a.bannerGrid(href="#{link}")
 				if specialCopy
 					img.special(src="#{imgPath}#{img}" alt="#{p}")
